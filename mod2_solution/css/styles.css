@@ -1,0 +1,87 @@
+/*You must implement the following breakpoints that will be considered desktop, tablet,
+and mobile.
+The browser should display a desktop version of the site when the width of the browser window is 992px and above.
+Tablet view should appear only if the width of the browser window is between 768px and 991px, inclusively.
+Mobile view should appear only if the width of the browser is equal to or less than 767px.*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.card {
+    border: black 1px solid;
+    background: grey;
+    padding: 10px;
+    /*position: relative;*/
+    float: left;
+}
+
+.card > h3 {
+    float: right;
+    position: relative;
+    top: -11px;
+    right: -11px;
+    padding: 5px 20px;
+    border: black 1px solid;
+}
+
+#beef {
+    background: #8d2100;
+    color: white;
+}
+
+#chicken {
+    background: lightpink;
+}
+
+#sushi {
+    background: yellow;
+}
+
+.card > p {
+    clear: right;
+}
+
+/********* Desktop view **********/
+@media (min-width: 992px) {
+    .card {
+        width: 30%;
+        margin: 1.5% ;
+
+    }
+    .cards{
+        padding: 0 20px;
+    }
+
+}
+
+/********* Tablet view **********/
+@media (min-width: 768px)and (max-width: 991px) {
+    .card {
+        width: 46%;
+        margin: 2%;
+    }
+
+    .whole-width {
+        width: auto;
+        margin: 2%;
+    }
+
+}
+
+/********* Mobile view **********/
+@media (max-width: 767px) {
+    .card {
+        margin: 2% 10%;
+    }
+}
